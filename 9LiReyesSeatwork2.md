@@ -55,19 +55,23 @@
 
 - Add in css ```position: relative; top: 20px; left: 20px;``` to .sidebar.
 
-- Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.
+- Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.\
+  *Answer: The sidebar offsets itself relative to its normal position. If you change the value it nudges itself to the value you put in the direction (eg.left:20px will nudge the 20px away from the let side.)*
 
 ### Step 2 (Fixed):
 
 - Add in css ```position: fixed; bottom: 0; width: 100%;``` to .footer.
 
-- Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?
+- Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?\
+*Answer: The footer is fixed at the bottom of the browser window. And if you scolled it will stay pinned unlike the relative which will move away if you scrolled.*
 
 ### Step 3 (Absolute):
 
 - Add in css ```position: absolute; top: 66px; left: 200px;``` to .content.
 
-- Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
+- Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?\
+*Answer: Their reference point(?) absolute stays within the page but fixed stays within the screen*
+
 
 ### Step 4 : (Absolute)
 
@@ -86,12 +90,15 @@
 
 - Give .content a z-index: 1.
 
-- Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
-
+- Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?\
+*Answer: The notice appears on top because of position: absolute it removes the element from the "normal flow" and puts it on a new layer. Z-index lets you adjust the stacking of elements manually.*
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
+    
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
+    *Answer: It changes the position of both elements*
     * What do you observe on about the effect of z-index on .notice and .content boxes?
+    *It will put the layer of the other higher than the other.*
 
 3. Please answer the following reflection questions (15 minutes)
 
