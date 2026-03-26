@@ -95,17 +95,29 @@
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
     
-    * Try to change the position of .content to relative then to fixed. What do you observed each time?
+    * Try to change the position of .content to relative then to fixed. What do you observed each time?\
     *Answer: It changes the position of both elements*
-    * What do you observe on about the effect of z-index on .notice and .content boxes?
+    * What do you observe on about the effect of z-index on .notice and .content boxes?\
     *It will put the layer of the other higher than the other.*
 
-3. Please answer the following reflection questions (15 minutes)
+3. Please answer the following reflection questions (15 minutes)\
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
+* static: Default. Moves with the page. No top/left/z-index.
+* relative: Normal flow, but can be nudged without moving neighbors.
+* absolute: Pulled out of flow. Moves relative to the nearest "positioned" parent.
+* fixed: Pulled out of flow. Stays frozen on the screen while scrolling.
+    b. How does absolute positioning depend on its parent element?\
+  *Answer: An absolute element looks for the closest parent with position: relative, absolute, or fixed.*
 
-    b. How does absolute positioning depend on its parent element?
+    c. How do you differentiate sticky from fixed (you can research on sticky)?\
 
-    c. How do you differentiate sticky from fixed (you can research on sticky)?
+* fixed: Stays on screen instantly and never moves.
+* sticky: Acts relative until it hits a scroll point (like top: 0), then "sticks" only within its parent's boundaries.
 
-    d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+    d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.\
+
+  
+   1. Fixed: A "Register Now" button pinned to the bottom-right corner so it's always visible.
+   2. Absolute: A "New" badge placed in the top-right corner of a specific event card.
+   3. Sticky: The "Schedule Table Header" that stays at the top of the screen as you scroll through a long list of classes.
