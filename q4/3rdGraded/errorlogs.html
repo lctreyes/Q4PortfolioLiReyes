@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
+ 
   <style>
     tr:nth-child(1) ~ tr:nth-child(odd) {
       background-color: lightgray;
@@ -33,7 +33,7 @@
     
   </style>
 </head>
-
+ 
 <body>
   <header>
     <nav>
@@ -42,9 +42,9 @@
       <a href="index.html#output">Output</a>
     </nav>
     
-    <h1 style="padding: 30px">Your Name / Section Mar 2026 </h1>
+    <h1 style="padding: 30px">lctreyes / Lithium Mar 2026 </h1>
   </header>
-
+ 
   <section id="table">
     <table> 
       <caption> Error Logs - place errors found in the table below</caption>
@@ -56,63 +56,63 @@
       </tr>
       <tr>
         <td> 1 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> CSS — nav a </td> 
+        <td> nav links used display: block, causing each link to stack vertically instead of appearing on one line </td>
+        <td> Changed display: block to display: inline-block </td>
       </tr>
       <tr>
         <td> 2 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> CSS — nav </td> 
+        <td> nav had no fixed positioning, so it scrolled with the page content instead of staying at the top </td>
+        <td> Added position: fixed; top: 0; left: 0; z-index: 1000; to the nav rule </td>
       </tr>
       <tr>
         <td> 3 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> CSS — nav a :hover </td> 
+        <td> hover selector had an extra space before :hover, making it target a child element inside &lt;a&gt; rather than the link itself — hover effect never triggered </td>
+        <td> Removed the space: changed nav a :hover to nav a:hover </td>
       </tr>
       <tr>
         <td> 4 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> CSS — .point </td> 
+        <td> .point was missing position: absolute, so the left and bottom values set by JavaScript had no effect and the dot always appeared at the top-left corner </td>
+        <td> Added position: absolute to the .point rule </td>
       </tr>
       <tr>
         <td> 5 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> JS — plotPoint() </td> 
+        <td> point.styleleft is not a valid property — it creates a meaningless custom attribute and the left position of the dot is never set </td>
+        <td> Corrected to point.style.left </td>
       </tr>
       <tr>
         <td> 6 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> JS — plotPoint() </td> 
+        <td> point.stylebottom is not a valid property — same typo as above, the bottom position of the dot is never set </td>
+        <td> Corrected to point.style.bottom </td>
       </tr>
       <tr>
         <td> 7 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> JS — plotPoint() </td> 
+        <td> the closing brace for the plotPoint() function was missing entirely, causing a syntax error that prevents the script from running </td>
+        <td> Added the missing closing } at the end of the function </td>
       </tr>
       <tr>
         <td> 8 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> JS — plotPoint() </td> 
+        <td> variables x0, y0, x, and y were used but never declared or assigned — they were undefined, so all calculations and comparisons produced incorrect results </td>
+        <td> Added var declarations reading and parsing values from the input fields using parseInt(document.getElementById(...).value) </td>
       </tr>
       <tr>
         <td> 9 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> JS — plotPoint() </td> 
+        <td> old .point divs were never removed before appending a new one, causing red dots to accumulate on the coordinate plane with each button click </td>
+        <td> Added code to query and remove all existing .point elements from coordinatePlane before creating a new one </td>
       </tr>
       <tr>
         <td> 10 </td> 
-        <td> </td> 
-        <td> </td>
-        <td> </td>
+        <td> JS — plotPoint() </td> 
+        <td> the quadrant comparisons (x > x0, etc.) always evaluated to false because x0 and y0 were undefined (consequence of Bug 8), making the output always show "divisa" </td>
+        <td> Fixed by resolving Bug 8 — once x0 and y0 are properly declared, the quadrant logic works correctly </td>
       </tr>
      
     </table>
@@ -134,5 +134,6 @@
   </footer>
  
 </body>
-
+ 
 </html>
+ 
